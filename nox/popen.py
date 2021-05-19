@@ -58,6 +58,7 @@ def popen(
     silent: bool = False,
     stdout: Union[int, IO] = None,
     stderr: Union[int, IO] = subprocess.STDOUT,
+    **kwargs: Any,
 ) -> Tuple[int, str]:
     if silent and stdout is not None:
         raise ValueError(
